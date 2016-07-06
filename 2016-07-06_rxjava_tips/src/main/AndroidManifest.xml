@@ -15,6 +15,8 @@
         <activity android:name=".example.FirstExampleActivity" />
         <activity android:name=".example.SecondExampleActivity" />
         <activity android:name=".example.ThirdExampleActivity" />
+
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

@@ -60,7 +60,6 @@ public class SecondExampleActivity extends RxAppCompatActivity {
         RxTextView.textChanges(searchBar)
                 .compose(bindToLifecycle())
                 .observeOn(Schedulers.io())
-                .debounce(1, TimeUnit.SECONDS)
                 .filter(charSequence -> charSequence.length() > 0)
                 .switchMap((CharSequence seq) -> interactor.searchUsers(seq.toString()))
                 .flatMap((SearchResult searchResult) ->
